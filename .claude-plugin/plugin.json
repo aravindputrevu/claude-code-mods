@@ -1,0 +1,44 @@
+{
+  "name": "hn-mod",
+  "displayName": "HN pulse",
+  "version": "0.1.0",
+  "description": "A programmable Hacker News trend widget for Claude Code, powered by TinyFish Search and Fetch",
+  "author": { "name": "aravindputrevu" },
+  "license": "MIT",
+  "keywords": ["hacker-news", "trends", "tinyfish", "mod"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "tinyfish_api_key": {
+      "type": "string",
+      "title": "TinyFish API key",
+      "description": "Key from agent.tinyfish.ai/api-keys. Leave it empty to use the TINYFISH_API_KEY variable or the login of the tinyfish CLI.",
+      "sensitive": true
+    },
+    "tinyfish_cli": {
+      "type": "string",
+      "title": "TinyFish CLI command",
+      "description": "The command the mod runs when no API key is set",
+      "default": "tinyfish"
+    },
+    "model": {
+      "type": "string",
+      "title": "Model",
+      "description": "The model that writes card specs, digests, themes and thread summaries",
+      "default": "haiku"
+    },
+    "snapshot_minutes": {
+      "type": "number",
+      "title": "Snapshot interval (minutes)",
+      "description": "How often the widget reads the HN lists to measure points per hour",
+      "default": 15,
+      "min": 5,
+      "max": 120
+    },
+    "auto_open": {
+      "type": "boolean",
+      "title": "Open at session start",
+      "description": "Open the HN pulse pane when a session starts",
+      "default": true
+    }
+  }
+}
