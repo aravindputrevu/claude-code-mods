@@ -213,9 +213,4 @@ claude plugin test .
 | `types/index.d.ts` | The `$.state` contract |
 | `tests/` | Tests, with a real TinyFish front-page reply (user names replaced) |
 
-Two rules from the mod API:
-
-- **Keep `$` in `register.tsx`.** `claude plugin validate` follows `$` only into functions of the same file. The other files are pure.
-- **Raise `version` in `.claude-plugin/plugin.json` for each release.** Installed copies stay at their version until it changes.
-
 See the Claude Code docs for [mods](https://code.claude.com/docs/en/plugins/mods/overview) and [plugin install](https://code.claude.com/docs/en/plugins/install).
