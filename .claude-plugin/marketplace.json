@@ -1,0 +1,13 @@
+{
+  "name": "hn-mod",
+  "description": "HN pulse: a programmable Hacker News trend widget for Claude Code",
+  "owner": {
+    "name": "aravindputrevu"
+  },
+  "plugins": [
+    {
+      "name": "hn-mod",
+      "source": "./"
+    }
+  ]
+}
